@@ -1,0 +1,590 @@
+body { margin: 0; height: 5000px; }
+
+ul{
+  list-style: none;
+  padding:0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.blind{
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+
+}
+.content_box{
+  width: 95%;
+  margin: 0 auto;
+
+}
+
+/* ----- <HEADER_TOP> ----- */
+.header{
+  width: 100%;
+
+}
+.header_top{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  position: relative;
+
+}
+/* ham_btn */
+#head_chk{
+  display: none;
+
+
+}
+.ham_chk {
+  display: block;
+  width: 80px;
+  height: 50px;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  margin-top: 100px;
+  margin-left: 30px;
+
+  transform: translateY(-50%);
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background-color:black;
+  border-radius: 20%;
+
+}
+.line:nth-child(2) {
+  margin: 10px 0;
+}
+
+.top {
+  transition: top 0.5s 0.5s, transform 0.5s ;
+  position: relative;
+  top: 0;
+}
+#head_chk:checked ~ .ham_chk > .top {
+  top: 13px;
+  transform:  rotate(45deg);
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+.mid {
+  transition: all 0s 0.5s;
+}
+#head_chk:checked ~ .ham_chk > .mid {
+
+  opacity: 0;
+  transition: all 0s 0.5s;
+}
+
+.bot {
+  transition: top 0.5s  0.5s, transform 0.5s;
+  position: relative;
+  top: 0;
+}
+#head_chk:checked ~ .ham_chk > .bot {
+  top: -13px;
+  transform:  rotate(-45deg);
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+.nav {
+  width: 450px;
+  height: 1000px;
+  padding: 10px 30px;
+
+  background-color:#fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  margin-top:70px;
+  overflow: hidden;
+
+  position: relative;
+  z-index: 9999999999;
+}
+
+#head_chk:checked ~ .nav {
+  transform: translateX(0%);
+ 
+}
+
+/* nav < pan */
+.indi_box{
+  display: flex;
+
+  align-items: center;
+  gap: 20px;
+ 
+}
+.nav_indi{
+  font-size: 22px;
+  cursor: pointer;
+}
+.pan_box{
+  padding: 50px 0;
+}
+.pan{
+  padding-bottom: 50px;
+  position: absolute;
+  top: 100px;
+  left: 100%;
+  
+}
+.pan_women{
+  left: 30px;
+  transition: all 0.5s;
+}
+.pan_section{
+  padding-bottom: 20px;
+}
+
+.pan_section > div{
+  padding-bottom: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.sec_title{
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px 0;
+
+}
+.s_sale{
+  color: hotpink;
+}
+
+
+
+
+
+
+
+
+
+/* LOGO */
+
+.logo_img{
+  position: absolute;
+  top: 1px;
+  left: 150px;
+}
+.logo_img > svg{
+  width: 300px;
+  height: 200px;
+}
+/* SEARCH_BAR */
+.head_list{
+  display: flex;
+  align-items: center;
+}
+.search{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 400px;
+  height: 30px;
+
+  border-bottom: 1px solid;
+
+  position: absolute;
+  top: 60px;
+  left: 50%;
+}
+
+.search_btn{
+  cursor: pointer;
+  margin: 0;
+}
+.search_bar{
+  width: 350px;
+  height: 70%;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  background: transparent;
+
+}
+
+/* HEAD_MENU */
+
+.head_menu{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+  font-size: 16px;
+
+  position: absolute;
+  top: 70px;
+  right: 5%;
+}
+
+
+/* ---MAIN--- */
+/* main_img_slide */
+
+.main_img_box{
+  margin: 60px auto 0 auto;
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.main_top{
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.m_slide1{
+  /* left: 0;
+  transform: translateX(100%);
+  display: none; */
+}
+
+/* slide img & slide btn */
+.main_sec2{
+  margin: 0 auto;
+  padding-top: 150px ; 
+  width: 90%;
+
+}
+
+.slide_img_box{
+  width: 80%;
+  /* height: 700px; */
+  padding-top: 40%;
+  margin: 0 auto;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  overflow: hidden;
+}
+.slide_p_box_1{
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+.slide_p_box_2{
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: absolute;
+  top: 0;
+  left: 100%;
+  /* left: 86%; */ 
+}
+.slide_img {
+  width: calc(100% / 3);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+}
+
+.s_img{
+  width: 100%;
+  /* height: 700px; */
+}
+
+.btn_slide{
+  font-size: 80px;
+  background-color: transparent;
+  border: none;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  
+}
+.btn_slide_L{
+  left: 0px;
+}
+.btn_slide_R{
+  right: 0px;
+}
+
+/* adv banner1 */
+.adv_banner1{
+
+  padding-top: 150px;
+}
+.adv_banner_box1{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 은은한 회색 그림자 */
+
+  overflow: hidden;
+  
+}
+.sale_banner{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s;
+
+}
+.sb_1{
+  left: 0px;
+}
+.sb_2{
+  left: 100%;
+ 
+}
+
+/* product header */
+.p_header{
+  text-align: center;
+  padding-top:350px ;
+  padding-bottom: 70px;
+}
+
+.p_title{
+  font-size: 40px;
+  font-weight: 900;
+  padding-bottom: 20px;
+}
+.p_desc{
+  font-size: 20px;
+}
+
+/* product list box */
+
+.p_item_list{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+}
+.p_list{
+  width: calc((100% - 120px)/ 5);
+  
+ 
+  flex: 0 0 auto;
+}
+.pro_img_box {
+  position: relative;
+}
+.list_img{
+  width: 100%;
+  height: 450px;
+}
+.size_chk {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  opacity: 0;
+  transition: all 0.2s;
+}
+.pro_img_box {
+  overflow: hidden;
+}
+.pro_img_box:hover .size_chk {
+  opacity: 1;
+}
+.size_chk > span {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.size_list_box {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: all 0.2s;
+
+
+  width: 100%;
+}
+.size_list_box.active {
+  transform: translateY(0);
+}
+.size_list{
+ margin-bottom: 10px;
+}
+
+/* 더보기 버튼 */
+.btn_showMore{
+  margin: 50px  auto 0 auto;
+  width: 200px;
+  line-height: 60px;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+/* Big Banner */
+.b_adv_title{
+  margin: 200px auto 10px auto;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+.b_adv_desc{
+  margin: 0 auto;
+  font-size: 22px;
+  text-align: center;
+
+}
+
+.b_banner > img{
+  width: 100%;
+  padding-top: 50px;
+}
+
+/* APP DOWNLOAD */
+
+.app_download_box{
+  width: 100%;
+  height: 600px;
+  background-color: rgb(238, 235, 235);
+  margin-top: 200px;
+  display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    justify-content: center; /* 세로 가운데 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+  
+}
+.a_d_title{
+  padding-top: 100px;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+}
+.a_d_desc{
+  padding-top: 30px;
+  font-size: 22px;
+  text-align: center;
+}
+.qr_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 60px;
+}
+.a_d_Ios, .a_d_android {
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 수직 정렬 */
+  align-items: center; /* 가운데 정렬 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.app_img{
+  width: 70%;
+  
+}
+.app_desc{
+  padding: 10px;
+}
+
+/* Footer */
+.footer_box{
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  padding: 100px 0 20px 0;
+}
+
+.f_title{
+  font-size: 15px;
+  color: gray;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.f_list{
+  margin-top: 100px;
+
+}
+
+.f_sns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
